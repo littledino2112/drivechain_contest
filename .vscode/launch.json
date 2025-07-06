@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Thunder Benchmarks",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--package",
+                    "thunder",
+                    "--benches",
+                    "--all-features"
+                ],
+                "filter": {
+                    "name": "benchmarks",
+                    "kind": "bench"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUSTFLAGS": "-C opt-level=0 -C debuginfo=2",
+                "CARGO_TERM_COLOR": "always",
+                "RUST_BACKTRACE": "1",
+                "RUST_LOG": "debug"
+            },
+            "console": "integratedTerminal",
+            // "preLaunchTask": "cargo-build-bench"
+        },
+        {
+            "type": "lldb",
+            "request": "launch", 
+            "name": "Debug Thunder Bench - Manual",
+            "program": "${workspaceFolder}/target/release/deps/benchmarks-*",
+            "args": [
+                "--bench"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUSTFLAGS": "-C target-cpu=native",
+                "CARGO_TERM_COLOR": "always",
+                "RUST_BACKTRACE": "1",
+                "RUST_LOG": "debug"
+            },
+            "console": "integratedTerminal",
+            "preLaunchTask": "cargo-build-bench-manual"
+        }
+    ]
+}
