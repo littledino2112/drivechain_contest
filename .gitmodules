@@ -4,3 +4,4 @@
 [submodule "lib/rustreexo"]
 	path = lib/rustreexo
 	url = https://github.com/littledino2112/rustreexo.git
+	branch = dev/improve_memforest
