@@ -5947,7 +5947,6 @@ name = "rustreexo"
 version = "0.4.0"
 dependencies = [
  "bitcoin_hashes 0.14.0",
- "rayon",
  "serde",
  "serde_json",
 ]
