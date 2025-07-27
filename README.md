@@ -6,6 +6,8 @@ Currently, there're 2 operations that take the most processing time in connect_b
 
 Improvement to memforest's *modify* alone improves the sync time by 25%. Combined with solution last week (contest1_1, not included in this submission) will reduce sync time almost by 50% on a 4-core, 8-thread CPU without any significant changes to the current architecture.
 
+Please run `git submodule update --init --recursive` to get the modified version of rustreexo.
+
 ### Example of redundancy when recalculating hashes: Sequential Deletion of Nodes [0, 2, 4]
 
 **Tree Setup:**
